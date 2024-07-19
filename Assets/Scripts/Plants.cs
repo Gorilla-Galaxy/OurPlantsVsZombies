@@ -1,21 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Plants : MonoBehaviour
 {
     [SerializeField] private int life, damage;
     [SerializeField] private GameObject bulletPrefab; 
-    [SerializeField] private GameObject maxDistance;
+    [SerializeField] private GameObject shootRange;
     [SerializeField] private float distance;
+    [SerializeField] private float timeBTBullets;
+    [SerializeField] private float timer;
+    [SerializeField] private Vector3 bulletSpawnOffset;
     
     void Start()
     {
-        distance = (float)maxDistance.transform.position.x;
+        distance = shootRange.transform.position.x - transform.position.x;
     }
+
     void Update()
     {
         CheckForColliders();
+        if (timer < timeBTBullets) {
+            timer += 1*Time.deltaTime;
+        }   else if (CompareTag("Sunflower")){
+            Fire();
+        }
     }
 
     public void CheckForColliders(){
@@ -23,9 +33,18 @@ public class Plants : MonoBehaviour
         RaycastHit2D ray = Physics2D.Raycast(transform.position, Vector2.right, distance, 1<<10);
 
         if (ray){
-            Debug.Log(" Acertou poura");
+            Fire();
         }
     }
 
+    private void Fire() {
+        if (timer >= timeBTBullets) {
+            Instantiate(bulletPrefab, transform.position + bulletSpawnOffset, quaternion.identity);
+            timer = 0;
+        }
+    }
 
+    public int GetDamage() {
+        return damage;
+    }
 }
