@@ -8,7 +8,8 @@ public class Zombies : MonoBehaviour
     [SerializeField] private float walkSpeed;
     [SerializeField] private new Rigidbody2D rigidbody;
 
-    private void Awake() {
+    private void Awake() 
+    {
         rigidbody = GetComponent<Rigidbody2D>();
     }
 

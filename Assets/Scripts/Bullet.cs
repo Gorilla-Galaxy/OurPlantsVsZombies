@@ -12,11 +12,13 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float bulletSpeed;
     [SerializeField] private new Rigidbody2D rigidbody;
     [SerializeField] private Vector3 direction;
+    [SerializeField] private float speedMod;
 
     private void Awake() {
         rigidbody = GetComponent<Rigidbody2D>();
         damage = father.GetDamage();
         SetDirection();
+        speedMod = UnityEngine.Random.Range(0.02f, 0.04f);
     }
 
     private void FixedUpdate() {
@@ -41,9 +43,8 @@ public class Bullet : MonoBehaviour
         Vector2 translation = bulletSpeed * Time.fixedDeltaTime * direction;
         rigidbody.MovePosition(position + translation);
         if (father.gameObject.CompareTag("Sunflower")) {
-            bulletSpeed -= 0.2f;
+            bulletSpeed -= 2 * speedMod;
             if (bulletSpeed < 0) {
-                direction = Vector2.zero;
                 GetComponent<Bullet>().enabled = false;
             }
         }

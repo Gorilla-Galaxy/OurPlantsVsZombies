@@ -102,6 +102,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3727293017518581404, guid: 9f92c35cee630be4c96ce9778795953f, type: 3}
   shootRange: {fileID: 891641736562440952, guid: 23c8e521a39124848abe4f5e2e1eff6f, type: 3}
   distance: 0
-  timeBTBullets: 4
+  timeBTBullets: 8
   timer: 0
-  bulletSpawnOffset: {x: 0, y: 0, z: 0}
+  bulletSpawnOffset: {x: 0, y: 0.2, z: 0}

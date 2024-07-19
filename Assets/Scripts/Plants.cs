@@ -24,6 +24,7 @@ public class Plants : MonoBehaviour
         if (timer < timeBTBullets) {
             timer += 1*Time.deltaTime;
         }   else if (CompareTag("Sunflower")){
+            bulletSpawnOffset.x = UnityEngine.Random.Range(-0.4f, 0.4f);
             Fire();
         }
     }
