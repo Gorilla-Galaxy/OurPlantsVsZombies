@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3353668518153039512}
   - component: {fileID: 6547454466276466927}
   m_Layer: 9
-  m_Name: PeashooterPlacing
+  m_Name: SunflowerPlacing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1989040762, guid: f2bcf067f9dd7b940b6cbc7cab6f5c0b, type: 3}
+  m_Sprite: {fileID: -14558239, guid: f2bcf067f9dd7b940b6cbc7cab6f5c0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.3529412}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseLocator: {fileID: 6547454466276466927}
-  plantPrefab: {fileID: 2467044764159905550, guid: f2eae57b2cc663e4ca098b6ca2478614, type: 3}
+  plantPrefab: {fileID: 8825455739937131500, guid: 96a4a024df901d64d9d5abc0a08945fa, type: 3}
 --- !u!114 &6547454466276466927
 MonoBehaviour:
   m_ObjectHideFlags: 0
