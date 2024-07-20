@@ -25,6 +25,6 @@ public class PlantPlacer : MonoBehaviour
     }
 
     private void VerifyCancel() {
-
+        
     }
 }
