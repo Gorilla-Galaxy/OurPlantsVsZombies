@@ -8,16 +8,16 @@ public class SunManager : MonoBehaviour
 {
     [SerializeField] private int sunCount;
     [SerializeField] private TMP_Text sunCountPlayer;
-    [SerializeField] private int sunPower;
+    [SerializeField] private int[] sunPower;
 
     private void Awake() {
-        sunPower = 25;
+        
     }
 
     void Start()
     {
-        AddSunCount();
-        Sun.OnOnMouseDown += AddSunCount;
+        AddSunCount(0);
+        Sun.OnOnMouseDown += SunCollected;
     }
 
     void Update()
@@ -29,9 +29,13 @@ public class SunManager : MonoBehaviour
         sunCountPlayer.text = sunCount.ToString();
     }
 
-    private void AddSunCount() {
-        sunCount += sunPower;
+    private void AddSunCount(int sunIdex) {
+        sunCount += sunPower[sunIdex];
         UpdateSunCount();
+    }
+
+    private void SunCollected() {
+        AddSunCount(0);
     }
 
     public bool BuyPlant(int price) {
@@ -44,5 +48,6 @@ public class SunManager : MonoBehaviour
 
     public void UndoBuy(int price) {
         sunCount += price;
+        UpdateSunCount();
     }
 }

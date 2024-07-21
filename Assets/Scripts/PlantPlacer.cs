@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
@@ -7,6 +8,9 @@ public class PlantPlacer : MonoBehaviour
 {
     [SerializeField] private MouseLocator mouseLocator;
     [SerializeField] private GameObject plantPrefab;
+    [SerializeField] private GridManager gridManager;
+    public static event Action OnCancelBuy;
+    public static event Action OnPlantPlaced;
 
     void Start()
     {
@@ -16,15 +20,26 @@ public class PlantPlacer : MonoBehaviour
     void Update()
     {
         transform.position = mouseLocator.GetMousePosition();
+        gridManager = mouseLocator.GetGridGameObject();
     }
 
     private void TileClicked() {
-        Instantiate(plantPrefab, transform.position, quaternion.identity);
+        if (VerifyCancel()) {
+            Instantiate(plantPrefab, mouseLocator.GetGridPosition(), quaternion.identity);
+            gridManager.Planted();
+            OnPlantPlaced?.Invoke();
+        } else {
+            OnCancelBuy?.Invoke();
+        }
         Tile.OnOnMouseDown -= TileClicked;
         Destroy(gameObject);
     }
 
-    private void VerifyCancel() {
-        
+    private bool VerifyCancel() {
+        if (gridManager.CheckPlantSlot() == 0) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
