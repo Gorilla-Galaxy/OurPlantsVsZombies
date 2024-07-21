@@ -48,4 +48,16 @@ public class Plants : MonoBehaviour
     public int GetDamage() {
         return damage;
     }
+
+    public int GetHp() {
+        return life;
+    }
+
+    public void DamagePlants(int damage) {
+        life -= damage;
+    }
+
+    public void MataPlanta() {
+        Destroy(gameObject);
+    }
 }

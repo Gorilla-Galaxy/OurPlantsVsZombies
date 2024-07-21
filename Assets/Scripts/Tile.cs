@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Sprite[] gramas;
+    [SerializeField] private int indexGrass;
     public static event Action OnOnMouseDown;
+
+    private void Start() {
+        indexGrass = UnityEngine.Random.Range(0, 7);
+        spriteRenderer.sprite = gramas[indexGrass];
+    }
 
     private void OnMouseDown() {
         OnOnMouseDown?.Invoke();
-    }
-
-    private void OnMouseEnter() {
-        gameObject.GetComponent<SpriteRenderer>().enabled = true;
-    }
-
-    private void OnMouseExit() {
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
     }
 }

@@ -48,5 +48,8 @@ public class Bullet : MonoBehaviour
                 GetComponent<Bullet>().enabled = false;
             }
         }
+        if (transform.position.x >= 10) {
+            Destroy(gameObject);
+        }
     }
 }

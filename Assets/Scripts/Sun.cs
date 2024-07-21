@@ -23,7 +23,7 @@ public class Sun : MonoBehaviour
         }
     }
 
-    private void OnMouseDown() {
+    private void OnMouseEnter() {
         OnOnMouseDown?.Invoke();
         Destroy(gameObject);
     }

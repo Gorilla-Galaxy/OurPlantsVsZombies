@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7473236428508885608}
   - component: {fileID: 6872751505141960691}
   - component: {fileID: 5242244463563693650}
+  - component: {fileID: 3762268938125945591}
   m_Layer: 9
   m_Name: Peashooter
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: -0.4, z: 0}
-  m_LocalScale: {x: 0.11, y: 0.099282056, z: 0.37606838}
+  m_LocalScale: {x: 0.16, y: 0.14441025, z: 0.5470085}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,8 +75,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -1989040762, guid: f2bcf067f9dd7b940b6cbc7cab6f5c0b, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: 1885928430, guid: 756f73fd0d26b6b4ab1cefe063d06237, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -115,14 +116,14 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0015938282, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.16, y: 8.83}
+    oldSize: {x: 9.142858, y: 9.142858}
     newSize: {x: 8.16, y: 8.83}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -151,3 +152,24 @@ MonoBehaviour:
   timeBTBullets: 2
   timer: 0
   bulletSpawnOffset: {x: 0.5, y: 0.2, z: 0}
+--- !u!95 &3762268938125945591
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2467044764159905550}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cb1151ca41bb4a646b6466790b45b9d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
