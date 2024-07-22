@@ -14,7 +14,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private Vector3 direction;
     [SerializeField] private float speedMod;
 
-    private void Awake() {
+    private void Awake() { // ai aia iaia
         rigidbody = GetComponent<Rigidbody2D>();
         damage = father.GetDamage();
         SetDirection();
