@@ -100,6 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseLocator: {fileID: 6547454466276466927}
   plantPrefab: {fileID: 2467044764159905550, guid: f2eae57b2cc663e4ca098b6ca2478614, type: 3}
+  gridManager: {fileID: 0}
+  xOffset: -0.15
+  yOffset: 0.4
 --- !u!114 &6547454466276466927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,3 +117,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
   mousePositionVector: {x: 0, y: 0}
+  rayDistance: 0
+  gridPosition: {x: 0, y: 0}
+  gridManager: {fileID: 0}

@@ -9,6 +9,9 @@ public class SunManager : MonoBehaviour
     [SerializeField] private int sunCount;
     [SerializeField] private TMP_Text sunCountPlayer;
     [SerializeField] private int[] sunPower;
+    [SerializeField] private Sun sun;
+    [SerializeField] private float timer;
+    [SerializeField] private float sunTimer;
 
     private void Awake() {
         
@@ -16,6 +19,9 @@ public class SunManager : MonoBehaviour
 
     void Start()
     {
+        AddSunCount(0);
+        AddSunCount(0);
+        AddSunCount(0);
         AddSunCount(0);
         Sun.OnOnMouseDown += SunCollected;
     }

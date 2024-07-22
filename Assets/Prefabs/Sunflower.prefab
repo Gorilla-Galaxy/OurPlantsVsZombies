@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6822026466590648639}
   - component: {fileID: 8709295036289240487}
   - component: {fileID: 7389234770308949148}
+  - component: {fileID: -2792689290056474813}
   m_Layer: 9
   m_Name: Sunflower
   m_TagString: Sunflower
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -14558239, guid: f2bcf067f9dd7b940b6cbc7cab6f5c0b, type: 3}
+  m_Sprite: {fileID: 1272916449, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -142,7 +143,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.3, y: 9.21}
+    oldSize: {x: 7.75, y: 8}
     newSize: {x: 7.3, y: 9.21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -151,3 +152,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.8089595, y: 8.0047035}
   m_EdgeRadius: 0
+--- !u!95 &-2792689290056474813
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825455739937131500}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 53a89417124efaa43828143ad88d430c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
