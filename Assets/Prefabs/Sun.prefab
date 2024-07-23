@@ -181,4 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decay: 3
-  bulletConfig: {fileID: 0}
+  bulletConfig: {fileID: 771839509348369625}
+  speed: 0.15
+  sunDistance: {x: 0, y: 0}
+  maxSunDistance: 6

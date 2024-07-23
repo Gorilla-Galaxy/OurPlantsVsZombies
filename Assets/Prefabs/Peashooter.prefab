@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7473236428508885608}
   - component: {fileID: 6872751505141960691}
   - component: {fileID: 5242244463563693650}
-  - component: {fileID: 3762268938125945591}
+  - component: {fileID: 2341290741876786111}
   m_Layer: 9
   m_Name: Peashooter
   m_TagString: Untagged
@@ -123,7 +123,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.75, y: 8}
+    oldSize: {x: 8.857142, y: 9.142858}
     newSize: {x: 8.16, y: 8.83}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -152,24 +152,35 @@ MonoBehaviour:
   timeBTBullets: 2
   timer: 0
   bulletSpawnOffset: {x: 0.5, y: 0.2, z: 0}
---- !u!95 &3762268938125945591
-Animator:
-  serializedVersion: 5
+--- !u!114 &2341290741876786111
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2467044764159905550}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cb1151ca41bb4a646b6466790b45b9d0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 428080a05e815aa46bbfef0329f3270a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationTime: 0.1
+  animationFrame: 0
+  animationSprites:
+  - {fileID: 225091471, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: -901330082, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: 800020600, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: 889922493, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: 2017159448, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: 1903845842, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: -929114054, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: 996181184, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: 1534508495, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: 1089908018, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: -1782408966, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: 1157131749, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: 1882691727, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: -1347587488, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: 1541116899, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  spriteRenderer: {fileID: 7473236428508885608}
+  loop: 0

@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7905556204187285678}
   - component: {fileID: 6822026466590648639}
-  - component: {fileID: 8709295036289240487}
   - component: {fileID: 7389234770308949148}
-  - component: {fileID: -2792689290056474813}
+  - component: {fileID: 8709295036289240487}
+  - component: {fileID: 581104874343538930}
   m_Layer: 9
   m_Name: Sunflower
   m_TagString: Sunflower
@@ -87,26 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8709295036289240487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8825455739937131500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1314d0bb105d804197ed5f2c7dd17fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 100
-  damage: 0
-  bulletPrefab: {fileID: 3727293017518581404, guid: 9f92c35cee630be4c96ce9778795953f, type: 3}
-  shootRange: {fileID: 891641736562440952, guid: 23c8e521a39124848abe4f5e2e1eff6f, type: 3}
-  distance: 0
-  timeBTBullets: 8
-  timer: 0
-  bulletSpawnOffset: {x: 0, y: 0.2, z: 0}
 --- !u!61 &7389234770308949148
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,7 +123,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 7.75, y: 8}
+    oldSize: {x: 14.090909, y: 14.545454}
     newSize: {x: 7.3, y: 9.21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -152,24 +132,54 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.8089595, y: 8.0047035}
   m_EdgeRadius: 0
---- !u!95 &-2792689290056474813
-Animator:
-  serializedVersion: 5
+--- !u!114 &8709295036289240487
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8825455739937131500}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 53a89417124efaa43828143ad88d430c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1314d0bb105d804197ed5f2c7dd17fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 100
+  damage: 0
+  bulletPrefab: {fileID: 3727293017518581404, guid: 9f92c35cee630be4c96ce9778795953f, type: 3}
+  shootRange: {fileID: 891641736562440952, guid: 23c8e521a39124848abe4f5e2e1eff6f, type: 3}
+  distance: 0
+  timeBTBullets: 8
+  timer: 0
+  bulletSpawnOffset: {x: 0, y: 0.2, z: 0}
+--- !u!114 &581104874343538930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825455739937131500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 428080a05e815aa46bbfef0329f3270a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationTime: 0.1071429
+  animationFrame: 0
+  animationSprites:
+  - {fileID: 1272916449, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: -1660007851, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: -2074174099, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: -1213168911, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: 1781824367, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: 1680248639, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: -1969618582, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: 490733617, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: -1969618582, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: 1680248639, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: 1781824367, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: -1213168911, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: -2074174099, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  - {fileID: -1660007851, guid: 8b347aace4429c544b2fcfaabcaf0e8f, type: 3}
+  spriteRenderer: {fileID: 6822026466590648639}
+  loop: 0

@@ -13,8 +13,9 @@ public class Bullet : MonoBehaviour
     [SerializeField] private new Rigidbody2D rigidbody;
     [SerializeField] private Vector3 direction;
     [SerializeField] private float speedMod;
+    [SerializeField] private bool isSunDrop = false;
 
-    private void Awake() { // ai aia iaia
+    private void Awake() {
         rigidbody = GetComponent<Rigidbody2D>();
         damage = father.GetDamage();
         SetDirection();
@@ -42,7 +43,10 @@ public class Bullet : MonoBehaviour
         Vector2 position = rigidbody.position;
         Vector2 translation = bulletSpeed * Time.fixedDeltaTime * direction;
         rigidbody.MovePosition(position + translation);
-        if (father.gameObject.CompareTag("Sunflower")) {
+        if (father.gameObject.CompareTag("Sunflower") && isSunDrop == false) {
+            if (transform.position.y > 6) {
+                isSunDrop = true;
+            }
             bulletSpeed -= 2 * speedMod;
             if (bulletSpeed < 0) {
                 GetComponent<Bullet>().enabled = false;
@@ -51,5 +55,9 @@ public class Bullet : MonoBehaviour
         if (transform.position.x >= 10) {
             Destroy(gameObject);
         }
+    }
+
+    public void SetSunState(bool state) {
+        isSunDrop = state;
     }
 }

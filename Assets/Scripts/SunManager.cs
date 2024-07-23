@@ -14,7 +14,8 @@ public class SunManager : MonoBehaviour
     [SerializeField] private float sunTimer;
 
     private void Awake() {
-        
+        timer = 3;
+        sunTimer = 5;
     }
 
     void Start()
@@ -28,7 +29,12 @@ public class SunManager : MonoBehaviour
 
     void Update()
     {
-        
+        timer += Time.deltaTime;
+        if (timer > sunTimer) {
+            timer = 0;
+            GetRandomTimer();
+            FireSun();
+        }
     }
 
     private void UpdateSunCount() {
@@ -44,6 +50,16 @@ public class SunManager : MonoBehaviour
         AddSunCount(0);
     }
 
+    private void GetRandomTimer() {
+        sunTimer = UnityEngine.Random.Range(7, 15);
+    }
+
+    private void FireSun() {
+        float xOffset = UnityEngine.Random.Range(-7, 7);
+        Vector2 sunPosition = new Vector2 (transform.position.x + xOffset, transform.position.y);
+        Instantiate(sun, sunPosition, Quaternion.identity);
+    }
+
     public bool BuyPlant(int price) {
         if (price <= sunCount) {
             sunCount -= price;
@@ -56,4 +72,5 @@ public class SunManager : MonoBehaviour
         sunCount += price;
         UpdateSunCount();
     }
+
 }
