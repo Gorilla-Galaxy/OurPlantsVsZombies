@@ -76,12 +76,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 225091471, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  m_Sprite: {fileID: -906936832, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.16, y: 8.83}
+  m_Size: {x: 4, y: 4.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -122,9 +122,9 @@ BoxCollider2D:
   m_Offset: {x: 0.0015938282, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.857142, y: 9.142858}
-    newSize: {x: 8.16, y: 8.83}
+    pivot: {x: 0.6236143, y: 0.1982157}
+    oldSize: {x: 10.666667, y: 11}
+    newSize: {x: 4, y: 4.25}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -151,9 +151,8 @@ MonoBehaviour:
   distance: 0
   timeBTBullets: 2
   timer: 0
-  bulletSpawnOffset: {x: 0.5, y: 0.2, z: 0}
+  bulletSpawnOffset: {x: 0.5, y: 0.7, z: 0}
   gridManager: {fileID: 0}
-  cooldown: 100
 --- !u!114 &2341290741876786111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,20 +168,20 @@ MonoBehaviour:
   animationTime: 0.1
   animationFrame: 0
   animationSprites:
-  - {fileID: 225091471, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: -901330082, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: 800020600, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: 889922493, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: 2017159448, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: 1903845842, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: -929114054, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: 996181184, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: 1534508495, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: 1089908018, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: -1782408966, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: 1157131749, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: 1882691727, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: -1347587488, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
-  - {fileID: 1541116899, guid: 9b69f2cd992a5fb47aab35f95ee2b1a8, type: 3}
+  - {fileID: 1573679299, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: 1037338770, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: -1359771618, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: -906936832, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: -1995645491, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: 125561301, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: -1117047956, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: -369630984, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: 36984677, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: -971347179, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: 207938561, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: 1580844579, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: 1105507111, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: 373908376, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
+  - {fileID: -546188289, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
   spriteRenderer: {fileID: 7473236428508885608}
   loop: 0

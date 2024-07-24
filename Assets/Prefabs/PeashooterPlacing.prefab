@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -1989040762, guid: f2bcf067f9dd7b940b6cbc7cab6f5c0b, type: 3}
+  m_Sprite: {fileID: -906936832, guid: b14a486313133fe4692c1b20c66aeca6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,8 +101,8 @@ MonoBehaviour:
   mouseLocator: {fileID: 6547454466276466927}
   plantPrefab: {fileID: 2467044764159905550, guid: f2eae57b2cc663e4ca098b6ca2478614, type: 3}
   gridManager: {fileID: 0}
-  xOffset: -0.15
-  yOffset: 0.4
+  xOffset: -0.05
+  yOffset: -0.3
   plantInstantiated: {fileID: 0}
 --- !u!114 &6547454466276466927
 MonoBehaviour:
