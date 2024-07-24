@@ -10,6 +10,7 @@ public class SeedPlanter : MonoBehaviour
     [SerializeField] private int cost;
     [SerializeField] private SunManager sunManager;
     [SerializeField] private GameObject prefabPlant;
+    [SerializeField] private KeyCode atalho;
     public static event Action OnPlantBought;
 
     void Start()
@@ -19,7 +20,9 @@ public class SeedPlanter : MonoBehaviour
 
     void Update()
     {
-        
+        if (Input.GetKeyDown(atalho)) {
+            TryBuyPlant();
+        }
     }
 
     [ContextMenu("Try Buy Plant")]

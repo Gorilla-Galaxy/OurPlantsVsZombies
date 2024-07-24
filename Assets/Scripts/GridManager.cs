@@ -45,4 +45,8 @@ public class GridManager : MonoBehaviour
     public void Planted() {
         tileScript.PlantCountUp();
     }
+    
+    public void PlanteRemoved() {
+        tileScript.PlantCountDown();
+    }
 }

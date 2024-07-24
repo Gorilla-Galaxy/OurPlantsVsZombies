@@ -11,6 +11,7 @@ public class PlantPlacer : MonoBehaviour
     [SerializeField] private GridManager gridManager;
     [SerializeField] private float xOffset;
     [SerializeField] private float yOffset;
+    [SerializeField] private GameObject plantInstantiated;
     private Vector2 centerPosition;
     public static event Action OnCancelBuy;
     public static event Action OnPlantPlaced;
@@ -30,7 +31,8 @@ public class PlantPlacer : MonoBehaviour
         if (VerifyCancel()) {
             centerPosition.x = mouseLocator.GetGridPosition().x + xOffset;
             centerPosition.y = mouseLocator.GetGridPosition().y + yOffset;
-            Instantiate(plantPrefab, centerPosition, quaternion.identity);
+            plantInstantiated = Instantiate(plantPrefab, centerPosition, quaternion.identity);
+            plantInstantiated.GetComponent<Plants>().SetGridManager(gridManager);
             gridManager.Planted();
             OnPlantPlaced?.Invoke();
         } else {

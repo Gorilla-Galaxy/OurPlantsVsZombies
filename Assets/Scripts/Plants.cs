@@ -12,6 +12,7 @@ public class Plants : MonoBehaviour
     [SerializeField] private float timeBTBullets;
     [SerializeField] private float timer;
     [SerializeField] private Vector3 bulletSpawnOffset;
+    [SerializeField] private GridManager gridManager;
     
     void Start()
     {
@@ -58,6 +59,11 @@ public class Plants : MonoBehaviour
     }
 
     public void MataPlanta() {
+        gridManager.PlanteRemoved();
         Destroy(gameObject);
+    }
+
+    public void SetGridManager(GridManager gridManager) {
+        this.gridManager = gridManager;
     }
 }

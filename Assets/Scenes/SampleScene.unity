@@ -1068,6 +1068,7 @@ MonoBehaviour:
   cost: 50
   sunManager: {fileID: 1120627884}
   prefabPlant: {fileID: 8999469041555398700, guid: cf42bcc90c17a8e4f88cd191d35a0f6c, type: 3}
+  atalho: 50
 --- !u!114 &417961929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4276,6 +4277,7 @@ MonoBehaviour:
   cost: 50
   sunManager: {fileID: 1120627884}
   prefabPlant: {fileID: 8999469041555398700, guid: 34bea1b846b4568469b0c1c71787139c, type: 3}
+  atalho: 49
 --- !u!1001 &2044326929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4473,7 +4475,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6294354449028640617, guid: 23c8e521a39124848abe4f5e2e1eff6f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.48
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6294354449028640617, guid: 23c8e521a39124848abe4f5e2e1eff6f, type: 3}
       propertyPath: m_LocalPosition.y
