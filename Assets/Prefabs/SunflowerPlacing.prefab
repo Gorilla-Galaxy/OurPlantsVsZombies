@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -14558239, guid: f2bcf067f9dd7b940b6cbc7cab6f5c0b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   gridManager: {fileID: 0}
   xOffset: -0.1
   yOffset: 0.4
+  plantInstantiated: {fileID: 0}
 --- !u!114 &6547454466276466927
 MonoBehaviour:
   m_ObjectHideFlags: 0

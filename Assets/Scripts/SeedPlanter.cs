@@ -63,6 +63,7 @@ public class SeedPlanter : MonoBehaviour
 
     private void CancelBuy() {
         sunManager.UndoBuy(cost);
+        origin = false;
         PlantPlaced();
     }
 
