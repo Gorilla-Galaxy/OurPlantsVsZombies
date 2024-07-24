@@ -786,7 +786,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2300,7 +2300,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zombie: {fileID: 7182674103304023089, guid: 3a320493e4385e843addb80e5417b193, type: 3}
-  timeBTZombies: 5
   timer: 0
   line:
   - 3.7
@@ -2308,6 +2307,9 @@ MonoBehaviour:
   - 0.25
   - -1.6
   - -3.5
+  minTime: 15
+  maxTime: 20
+  timeBTZombies: 0
 --- !u!4 &879083383
 Transform:
   m_ObjectHideFlags: 0
@@ -4432,7 +4434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeadddb909f2b1d47b65a0e8493e9d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 50
+  cost: 100
   sunManager: {fileID: 1120627884}
   prefabPlant: {fileID: 8999469041555398700, guid: 34bea1b846b4568469b0c1c71787139c, type: 3}
   atalho: 49
