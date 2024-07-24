@@ -163,7 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   father: {fileID: 5242244463563693650, guid: f2eae57b2cc663e4ca098b6ca2478614, type: 3}
   damage: 0
-  bulletSpeed: 2
+  bulletSpeed: 6
   rigidbody: {fileID: 0}
   direction: {x: 0, y: 0, z: 0}
   speedMod: 0
