@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 0a9d92757e1331641b901dd4d1596265, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -168,6 +168,7 @@ MonoBehaviour:
   rigidbody: {fileID: 0}
   direction: {x: 0, y: 0, z: 0}
   speedMod: 0
+  isSunDrop: 0
 --- !u!114 &-6955841410113017198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +183,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decay: 3
   bulletConfig: {fileID: 771839509348369625}
-  speed: 0.15
-  sunDistance: {x: 0, y: 0}
+  previousPosition: {x: 0, y: 0}
   maxSunDistance: 6

@@ -391,8 +391,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -492, y: -62}
-  m_SizeDelta: {x: 72.122, y: 34.5664}
+  m_AnchoredPosition: {x: -490.5785, y: -62}
+  m_SizeDelta: {x: 124.2447, y: 34.5664}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &77528509
 MonoBehaviour:
@@ -414,7 +414,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 0
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -441,8 +441,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -779,7 +779,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 347801852}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 21cf050f0af0f7b40a9b42d3526c8d20, type: 3}
@@ -1149,6 +1149,8 @@ MonoBehaviour:
   timerPlant: 5
   buyableStart: 1
   imageCooldown: {fileID: 373910064}
+  compra: 0
+  origin: 0
 --- !u!114 &417961929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1661,8 +1663,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3772a6924738fb445948b16925da6f01, type: 3}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: ce6dda24eb57a5340961ea96adc8cb06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.9411765}
   m_FlipX: 0
   m_FlipY: 0
@@ -4438,6 +4440,8 @@ MonoBehaviour:
   timerPlant: 10
   buyableStart: 0
   imageCooldown: {fileID: 956090142}
+  compra: 0
+  origin: 0
 --- !u!1001 &2044326929
 PrefabInstance:
   m_ObjectHideFlags: 0

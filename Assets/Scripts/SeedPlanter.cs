@@ -18,6 +18,8 @@ public class SeedPlanter : MonoBehaviour
     [SerializeField] private float timerPlant;
     [SerializeField] private bool buyableStart; //Se a planta pode ser comprada no início do jogo ou tem que esperar o cooldown 
     [SerializeField] private Image imageCooldown;
+    [SerializeField] private bool compra; // Armazena o retorno do método SunManager.BuyPlant()
+    [SerializeField] private bool origin = false; // Verifica se a origem do evento vem desse script
 
     void Start()
     {
@@ -36,7 +38,7 @@ public class SeedPlanter : MonoBehaviour
             timerCooldownPlant = 0;    
         } else {
             timerCooldownPlant -= Time.deltaTime;
-            imageCooldown.fillAmount = timerCooldownPlant / 10;
+            imageCooldown.fillAmount = timerCooldownPlant / timerPlant;
         }
         if (Input.GetKeyDown(atalho)) {
             TryBuyPlant();
@@ -45,14 +47,17 @@ public class SeedPlanter : MonoBehaviour
 
     [ContextMenu("Try Buy Plant")]
     public void TryBuyPlant() {
-        if (sunManager.BuyPlant(cost) && timerCooldownPlant == 0) {
-            Instantiate(prefabPlant, Input.mousePosition, Quaternion.identity); 
+        compra = sunManager.BuyPlant(cost);
+        if (compra && timerCooldownPlant == 0) {
+            Instantiate(prefabPlant, Input.mousePosition, Quaternion.identity);
+            origin = true;
             OnPlantBought?.Invoke();
             PlantPlacer.OnCancelBuy += CancelBuy;
             PlantPlacer.OnPlantPlaced += PlantPlaced;
-        }  
-        if(timerCooldownPlant > 0 && sunManager.GetSunCount() >= cost){
-            sunManager.UndoBuy(cost); 
+        }
+        if(timerCooldownPlant > 0){
+            if (!compra) {
+            } else sunManager.UndoBuy(cost);
         }
     }
 
@@ -64,6 +69,9 @@ public class SeedPlanter : MonoBehaviour
     private void PlantPlaced() {
         PlantPlacer.OnCancelBuy -= CancelBuy;
         PlantPlacer.OnCancelBuy -= PlantPlaced; 
-        timerCooldownPlant = timerPlant;      
+        if (origin) {
+            timerCooldownPlant = timerPlant;
+            origin = false;
+        }
     }
 }
