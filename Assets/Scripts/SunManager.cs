@@ -35,9 +35,10 @@ public class SunManager : MonoBehaviour
             GetRandomTimer();
             FireSun();
         }
+
     }
 
-    private void UpdateSunCount() {
+    public void UpdateSunCount() {
         sunCountPlayer.text = sunCount.ToString();
     }
 
@@ -61,7 +62,7 @@ public class SunManager : MonoBehaviour
     }
 
     public bool BuyPlant(int price) {
-        if (price <= sunCount) {
+        if (price <= sunCount ) {
             sunCount -= price;
             UpdateSunCount();
             return true;
@@ -71,6 +72,10 @@ public class SunManager : MonoBehaviour
     public void UndoBuy(int price) {
         sunCount += price;
         UpdateSunCount();
+    }
+
+    public int GetSunCount() {
+        return sunCount;
     }
 
 }

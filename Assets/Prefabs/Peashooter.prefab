@@ -152,6 +152,8 @@ MonoBehaviour:
   timeBTBullets: 2
   timer: 0
   bulletSpawnOffset: {x: 0.5, y: 0.2, z: 0}
+  gridManager: {fileID: 0}
+  cooldown: 100
 --- !u!114 &2341290741876786111
 MonoBehaviour:
   m_ObjectHideFlags: 0
