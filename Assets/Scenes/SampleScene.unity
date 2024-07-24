@@ -1069,6 +1069,15 @@ MonoBehaviour:
   sunManager: {fileID: 1120627884}
   prefabPlant: {fileID: 8999469041555398700, guid: cf42bcc90c17a8e4f88cd191d35a0f6c, type: 3}
   atalho: 50
+<<<<<<< Updated upstream
+=======
+  timerCooldownPlant: 0
+  timerPlant: 5
+  buyableStart: 1
+  imageCooldown: {fileID: 373910064}
+  compra: 0
+  origem: 0
+>>>>>>> Stashed changes
 --- !u!114 &417961929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4278,6 +4287,15 @@ MonoBehaviour:
   sunManager: {fileID: 1120627884}
   prefabPlant: {fileID: 8999469041555398700, guid: 34bea1b846b4568469b0c1c71787139c, type: 3}
   atalho: 49
+<<<<<<< Updated upstream
+=======
+  timerCooldownPlant: 0
+  timerPlant: 10
+  buyableStart: 0
+  imageCooldown: {fileID: 956090142}
+  compra: 0
+  origem: 0
+>>>>>>> Stashed changes
 --- !u!1001 &2044326929
 PrefabInstance:
   m_ObjectHideFlags: 0
