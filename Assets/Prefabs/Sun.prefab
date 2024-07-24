@@ -185,3 +185,4 @@ MonoBehaviour:
   bulletConfig: {fileID: 771839509348369625}
   previousPosition: {x: 0, y: 0}
   maxSunDistance: 6
+  sunRedutor: 8

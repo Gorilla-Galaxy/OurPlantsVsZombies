@@ -9,6 +9,7 @@ public class Sun : MonoBehaviour
     [SerializeField] private Bullet bulletConfig;
     [SerializeField] private Vector2 previousPosition;
     [SerializeField] private float maxSunDistance;
+    [SerializeField] private float sunRedutor;
     public static event Action OnOnMouseDown;
 
     private void Awake() {
@@ -31,7 +32,7 @@ public class Sun : MonoBehaviour
     {
         if (bulletConfig.enabled == false) {
             decay -= 0.8f*Time.deltaTime;
-            transform.localScale -= transform.localScale*Time.deltaTime/6;
+            transform.localScale -= transform.localScale*Time.deltaTime/sunRedutor;
             if (decay < 0) {
                 Destroy(gameObject);
             }
