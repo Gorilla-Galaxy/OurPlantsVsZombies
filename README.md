@@ -2,7 +2,6 @@
 Plantas: Girassol, Dispara Ervilha normal e de gelo,  Noz, Batatamina, Cacto, espinho<br>
 Carnívora normal, flamejante e gelada, Gigasol, RUINAGOMELO<br> 
 TODO:<br>
-Cooldown das plantas<br>
 Pá<br>
 Menus<br>
 Movimento de parábola<br>
