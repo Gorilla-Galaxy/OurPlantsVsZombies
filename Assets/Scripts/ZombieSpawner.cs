@@ -40,7 +40,6 @@ public class ZombieSpawner : MonoBehaviour
             }
     }
     public void ZombieDead() {
-        Debug.Log("Porra");
         qtdZumbisMortos++;
     }
 }
