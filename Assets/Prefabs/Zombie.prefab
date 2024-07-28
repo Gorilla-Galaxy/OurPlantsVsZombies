@@ -178,4 +178,5 @@ MonoBehaviour:
   fixedSpeed: 0.3
   attackSpeed: 1
   planta: {fileID: 0}
+  spawner: {fileID: 0}
   isAttacking: 0

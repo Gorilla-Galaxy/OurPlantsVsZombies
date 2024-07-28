@@ -5,24 +5,22 @@ using UnityEngine;
 public class ZombieSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject zombie;
-    [SerializeField] private float timer;
+    [SerializeField] private int qtdZumbisMortos = 0;
     [SerializeField] private float[] line;
-    [SerializeField] private float minTime;
-    [SerializeField] private float maxTime;
     [SerializeField] private float timeBTZombies;
+    
     
     void Awake()
     {
-        RandomTimeSpawn();
+        timeBTZombies = 17f;
     }
     void Update()
     {    
         timeBTZombies -= Time.deltaTime;
         if (timeBTZombies < 0) {
             SpawnZombie();
-            RandomTimeSpawn();
+            timeBTZombies = 17f;
         }
-        timer += Time.deltaTime;
         Wave();
     }
 
@@ -31,15 +29,18 @@ public class ZombieSpawner : MonoBehaviour
         Instantiate(zombie, new Vector2 (transform.position.x, line[index]), Quaternion.identity);
         timeBTZombies -= Time.deltaTime;
     }
-
-    public void RandomTimeSpawn(){
-        timeBTZombies = UnityEngine.Random.Range(minTime, maxTime);
-    }
     public void Wave(){
-        if (timer > 100) {
-            timeBTZombies -= 2*Time.deltaTime;
-        } else if (timer > 50) {
-            timeBTZombies -= 1*Time.deltaTime;
-        }
+        
+        if (qtdZumbisMortos > 20) {
+            timeBTZombies -= 10*Time.deltaTime;
+        } else if (qtdZumbisMortos > 10) {
+                timeBTZombies -= 4*Time.deltaTime;
+            } else if (qtdZumbisMortos > 5) {
+                timeBTZombies -= 2*Time.deltaTime;
+            }
+    }
+    public void ZombieDead() {
+        Debug.Log("Porra");
+        qtdZumbisMortos++;
     }
 }

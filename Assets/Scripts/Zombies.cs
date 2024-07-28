@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Zombies : MonoBehaviour
@@ -10,6 +12,7 @@ public class Zombies : MonoBehaviour
     [SerializeField] private float fixedSpeed = 0.3f;
     [SerializeField] private float attackSpeed = 1f;
     [SerializeField] private Plants planta;
+    [SerializeField] private GameObject spawner;
     [SerializeField] private bool isAttacking = false;
     float timer = 0;
 
@@ -20,7 +23,10 @@ public class Zombies : MonoBehaviour
 
     void Update()
     {
-        if (life <= 0) Destroy(gameObject);
+        if (life <= 0){
+            spawner.GetComponent<ZombieSpawner>().ZombieDead();
+            Destroy(gameObject);            
+        }
         if (isAttacking) {
             walkSpeed = 0;
             if (planta.GetHp() >= 0) {
@@ -48,6 +54,9 @@ public class Zombies : MonoBehaviour
         if (other.gameObject.layer == 9) {
             planta = other.gameObject.GetComponent<Plants>();
             isAttacking = true;
+        }
+        if (other.gameObject.tag == "ZombieSpawner") {
+            spawner = other.GameObject();
         }
     }
 
