@@ -1,5 +1,5 @@
 # OurPlantsVsZombies<br>
-Plantas:
+### Plantas:
 - Girassol
 - Dispara Ervilha
   - Padrão
@@ -13,7 +13,10 @@ Plantas:
   - Flamejante 
   - Gelada
 - Gigasol
-- RUINAGOMELO   
+- RUINAGOMELO
+
+---
+
 ### TODO:  
 - Pá  
 - Menus  
@@ -25,7 +28,4 @@ Plantas:
 - DEMOLIDOR DE ZUMBIS 8000  
 - Derrota  
 - Fases  
-  
-  
-  
-Boss Misterioso Sinistro? :D<br>
+- Boss Misterioso Sinistro? :D
