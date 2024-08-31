@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4451926407927460760}
   - component: {fileID: 3709405725326821745}
   - component: {fileID: 859097024747282278}
-  - component: {fileID: 771839509348369625}
+  - component: {fileID: 1537659498415240818}
   - component: {fileID: -6955841410113017198}
   m_Layer: 6
   m_Name: Sun
@@ -150,7 +150,7 @@ CircleCollider2D:
   m_Offset: {x: -0.19530892, y: 0.0667578}
   serializedVersion: 2
   m_Radius: 4.112895
---- !u!114 &771839509348369625
+--- !u!114 &1537659498415240818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3727293017518581404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 629dee396368b834db50bd136afd0515, type: 3}
+  m_Script: {fileID: 11500000, guid: de1b9dd2fdc9c364b817b0caceb70b1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   father: {fileID: 8709295036289240487, guid: 96a4a024df901d64d9d5abc0a08945fa, type: 3}
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   decay: 3
-  bulletConfig: {fileID: 771839509348369625}
+  bulletConfig: {fileID: 1537659498415240818}
   previousPosition: {x: 0, y: 0}
   maxSunDistance: 6
   sunRedutor: 8

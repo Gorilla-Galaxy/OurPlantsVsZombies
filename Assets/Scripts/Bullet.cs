@@ -7,19 +7,16 @@ using UnityEngine.UIElements;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] private Plants father;
-    [SerializeField] private int damage;
-    [SerializeField] private float bulletSpeed;
-    [SerializeField] private new Rigidbody2D rigidbody;
-    [SerializeField] private Vector3 direction;
-    [SerializeField] private float speedMod;
-    [SerializeField] private bool isSunDrop = false;
+    [SerializeField] protected Plants father;
+    [SerializeField] protected int damage;
+    [SerializeField] protected float bulletSpeed;
+    [SerializeField] protected new Rigidbody2D rigidbody;
+    [SerializeField] protected Vector3 direction;
 
     private void Awake() {
         rigidbody = GetComponent<Rigidbody2D>();
         damage = father.GetDamage();
-        SetDirection();
-        speedMod = UnityEngine.Random.Range(0.02f, 0.04f);
+        direction = Vector2.right;
     }
 
     private void FixedUpdate() {
@@ -33,31 +30,12 @@ public class Bullet : MonoBehaviour
         }
     }
 
-    private void SetDirection() {
-        if (father.gameObject.CompareTag("Sunflower")) {
-            direction = Vector2.down;
-        } else direction = Vector2.right;
-    }
-
-    private void MoveBullet() {
+    public void MoveBullet() {
         Vector2 position = rigidbody.position;
         Vector2 translation = bulletSpeed * Time.fixedDeltaTime * direction;
         rigidbody.MovePosition(position + translation);
-        if (father.gameObject.CompareTag("Sunflower") && isSunDrop == false) {
-            if (transform.position.y > 6) {
-                isSunDrop = true;
-            }
-            bulletSpeed -= 2 * speedMod;
-            if (bulletSpeed < 0) {
-                GetComponent<Bullet>().enabled = false;
-            }
-        }
         if (transform.position.x >= 10) {
             Destroy(gameObject);
         }
-    }
-
-    public void SetSunState(bool state) {
-        isSunDrop = state;
     }
 }
