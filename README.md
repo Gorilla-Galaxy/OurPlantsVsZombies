@@ -7,9 +7,9 @@
 - Noz
 - Batatamina
 - Cacto
-- espinho
-
-- Carnívora normal
+- Espinho
+- Carnívora
+  - Normal
   - Flamejante 
   - Gelada
 - Gigasol
