@@ -1,7 +1,7 @@
 # OurPlantsVsZombies<br>
 Plantas: Girassol, Dispara Ervilha normal e de gelo,  Noz, Batatamina, Cacto, espinho  
 Carnívora normal, flamejante e gelada, Gigasol, RUINAGOMELO   
-##### TODO:  
+### TODO:  
 Pá  
 Menus  
 Movimento de parábola  
