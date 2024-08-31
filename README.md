@@ -1,5 +1,5 @@
 # OurPlantsVsZombies<br>
-### Plantas:
+### Plantas :
 - Girassol
 - Dispara Ervilha
   - Padrão
@@ -17,7 +17,7 @@
 
 ---
 
-### TODO:  
+### TODO :  
 - Pá  
 - Menus  
 - Movimento de parábola  
