@@ -59,7 +59,7 @@ public class Plants : MonoBehaviour
     }
 
     public void MataPlanta() {
-        gridManager.PlanteRemoved();
+        gridManager.PlantRemoved();
         Destroy(gameObject);
     }
 

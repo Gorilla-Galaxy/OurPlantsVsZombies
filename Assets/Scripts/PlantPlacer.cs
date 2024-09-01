@@ -27,6 +27,10 @@ public class PlantPlacer : MonoBehaviour
         gridManager = mouseLocator.GetGridGameObject();
     }
 
+    /// <summary>
+    /// Se não houver uma planta no tile, Instancia a planta no centro dele e passa o gridManager para ela,
+    /// notifica o grid que a planta foi plantada e dispara o evento avisando. Se houver, dispara o evento cancelando.
+    /// </summary>
     private void TileClicked() {
         if (VerifyCancel()) {
             centerPosition.x = mouseLocator.GetGridPosition().x + xOffset;
@@ -42,6 +46,10 @@ public class PlantPlacer : MonoBehaviour
         Destroy(gameObject);
     }
 
+    /// <summary>
+    /// Checa se há uma planta na célula clicada
+    /// </summary>
+    /// <returns>True caso encontre uma planta, false caso contrário</returns>
     private bool VerifyCancel() {
         if (gridManager.CheckPlantSlot() == 0) {
             return true;

@@ -16,10 +16,10 @@ public class SeedPlanter : MonoBehaviour
     [Header("Cooldown")]
     [SerializeField] private float timerCooldownPlant;
     [SerializeField] private float timerPlant;
-    [SerializeField] private bool buyableStart; //Se a planta pode ser comprada no início do jogo ou tem que esperar o cooldown 
+    [SerializeField] private bool buyableStart;         //Se a planta pode ser comprada no início do jogo ou tem que esperar o cooldown 
     [SerializeField] private Image imageCooldown;
-    [SerializeField] private bool compra; // Armazena o retorno do método SunManager.BuyPlant()
-    [SerializeField] private bool origin = false; // Verifica se a origem do evento vem desse script
+    private bool compra; // Armazena o retorno do método SunManager.BuyPlant()
+    private bool origin = false; // Verifica se a origem do evento vem desse script
 
     void Start()
     {
@@ -45,6 +45,12 @@ public class SeedPlanter : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Tenta realizar a compra de uma planta.
+    /// Caso tenha a quantidade de sóis e não esteja em cooldown, instancia a planta na posição do mouse,
+    /// dispara o evento OnPlantBought e inscreve o PlantPlacer nos eventos ouvindo se a planta foi plantada,
+    /// ao tentar comprar a planta, ativa a flag origin, necessária para desinscrever nos eventos, ou a compra cancelada
+    /// </summary>
     [ContextMenu("Try Buy Plant")]
     public void TryBuyPlant() {
         compra = sunManager.BuyPlant(cost);
@@ -52,12 +58,14 @@ public class SeedPlanter : MonoBehaviour
             Instantiate(prefabPlant, Input.mousePosition, Quaternion.identity);
             origin = true;
             OnPlantBought?.Invoke();
+            // Como eventos são estáticos, nós podemos fazer a inscrição deles a partir de qualquer lugar
+            // Aqui, até a planta ser colocada, todos os PlantPlacers existentes estarão inscritos no evento
             PlantPlacer.OnCancelBuy += CancelBuy;
             PlantPlacer.OnPlantPlaced += PlantPlaced;
         }
         if(timerCooldownPlant > 0){
-            if (!compra) {
-            } else sunManager.UndoBuy(cost);
+            if (compra)
+                sunManager.UndoBuy(cost);
         }
     }
 

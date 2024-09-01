@@ -35,7 +35,6 @@ public class SunManager : MonoBehaviour
             GetRandomTimer();
             FireSun();
         }
-
     }
 
     public void UpdateSunCount() {
@@ -77,5 +76,4 @@ public class SunManager : MonoBehaviour
     public int GetSunCount() {
         return sunCount;
     }
-
 }
