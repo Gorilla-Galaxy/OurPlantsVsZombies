@@ -1,5 +1,5 @@
 # OurPlantsVsZombies  
-[!Text alt](https://github.com/Gorilla-Galaxy/OurPlantsVsZombies/blob/main/images/GameRunning1.png "A picture of the game")  
+![Alt text](https://github.com/Gorilla-Galaxy/OurPlantsVsZombies/blob/main/images/GameRunning1.png "A picture of the game")  
 ### Plantas :
 - Girassol
 - Dispara Ervilha
